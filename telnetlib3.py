@@ -62,7 +62,7 @@ while(loop == "x"):
         tn.write("exit\n")
         print tn.read_all()
     else:
-        print("Incorrect Option!!!")
+        print("Incorrect Option!!")
 
     print("======================================") 
     loop = raw_input("Config again? (y,n) ")
