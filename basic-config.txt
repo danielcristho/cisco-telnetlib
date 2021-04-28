@@ -1,0 +1,14 @@
+Basic configuration before starting
+- CONFIGURE TELNET
+  #enable
+  #configure terminal
+  #username admin password 123 // enter this when login
+  #enable secret 1234
+  #line vty 0 4
+  #transport input telnet 
+  #login local
+  #exit
+  
+Testing  
+  
+  
