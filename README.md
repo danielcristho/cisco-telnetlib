@@ -8,8 +8,8 @@
   <p>#enable </p>
   <p>#configure terminal</p>
   <p>#username admin password 123 // enter this when login </p>
-  <p>#enable secret 1234 </p>
-  <p>#line vty 0 4</p> // enter this on privileges access
+  <p>#enable secret 1234 // enter this secret on privileges access </p>
+  <p>#line vty 0 4</p> 
   <p>#transport input telnet</p> 
   <p>#login local</p>
   <p>#exit</p>
