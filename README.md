@@ -13,5 +13,4 @@
   <p>#transport input telnet</p> 
   <p>#login local</p>
   <p>#exit</p>
-  
-Daniel
+
