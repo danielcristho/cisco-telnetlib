@@ -14,5 +14,4 @@
   <p>#login local</p>
   <p>#exit</p>
   
-test login via telnet!!!
 Daniel
