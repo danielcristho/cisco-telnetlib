@@ -1,24 +1,23 @@
 import telnetlib
 import getpass
 
-print ("Welcome to Network Automation on Cisco")
-host = raw_input("Enter Device IP Address:")
-user = raw_input("Enter  telnet username:")
+host = input("Enter Device IP Address: ")
+user = input("Enter  telnet username: ")
 password = getpass.getpass()
 
 tn = telnetlib.Telnet(host)
 
-tn.read_until("Username:")
+tn.read_until(b"Username: ")
 tn.write(user + "\n")
 if password:
-    tn.read_until("Password:")
+    tn.read_until(b"Password: ")
     tn.write(password + "\n")
     tn.write("en\n")
-    tn.read_until("Password:")
+    tn.read_until(b"Password: ")
     tn.write("1234\n")
-    tn.write("clock set 03:31:00 2 Mar 2021\n")
+    tn.write("clock set 17:00:00 22 Okt 2022\n")
     tn.write("conf t\n")
-    tn.write("hostname SW_1\n")
+    tn.write("hostname RTR1\n")
     tn.write("vlan 50\n")
     tn.write("name admin\n")
     tn.write("vlan 60\n")
@@ -28,4 +27,4 @@ if password:
     tn.write("end\n")
     tn.write("exit\n")
 print("Successful Config")    
-print tn.read_all()
+print (tn.read_all())
